@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserva de Turnos - Peluquería</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Fuentes e Iconos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">
+      <i class="fa-solid fa-scissors"></i>
+      <span>Style & Cut</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="card">
+      <h2><i class="fa-regular fa-clock"></i> Horarios de Tarde</h2>
+      <p class="subtitle">Selecciona tu turno de 20 minutos para reservar. Las horas reservadas quedarán bloqueadas.</p>
+
+      <form id="bookingForm">
+        <!-- Selección de Horario -->
+        <div class="form-group">
+          <div id="slotsContainer" class="slots-grid">
+            <!-- Se genera dinámicamente con JavaScript -->
+          </div>
+          <p id="slotError" class="error-msg">Por favor, selecciona una hora disponible.</p>
+        </div>
+
+        <!-- Botón de Confirmación -->
+        <button type="submit" class="btn-submit">
+          <i class="fa-solid fa-check"></i> Reservar Turno
+        </button>
+      </form>
+
+      <!-- Botón para reiniciar horarios -->
+      <button type="button" class="btn-reset" onclick="resetAllSlots()">
+        <i class="fa-solid fa-rotate-right"></i> Reiniciar todos los turnos
+      </button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
